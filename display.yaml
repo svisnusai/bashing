@@ -1,5 +1,5 @@
 -name: Course Devops
-hosts: BAS
+ hosts: BAS
  tasks:
  -name: dispaly
   ansible.builtin.debug:
