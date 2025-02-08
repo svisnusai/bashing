@@ -1,4 +1,4 @@
-name: Course Devops
+-name: Course Devops
 hosts: BAS
  tasks:
  -name: dispaly
