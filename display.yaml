@@ -1,6 +1,6 @@
 - name: Course Devops
- hosts: BAS
- tasks:
- - name: dispaly
-   ansible.builtin.debug:
-   msg: echo "display the course name"
+  hosts: BAS
+  tasks:
+  - name: dispaly
+    ansible.builtin.debug:
+    msg: echo "display the course name"
