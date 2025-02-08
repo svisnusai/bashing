@@ -2,5 +2,5 @@
 hosts: BAS
  tasks:
  -name: dispaly
-  ansible.builtin.debug;
+  ansible.builtin.debug:
   msg: echo "display the course name"
