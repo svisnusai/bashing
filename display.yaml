@@ -3,4 +3,3 @@
   tasks:
   - name: dispaly the data
     ansible.builtin.debug:
-    msg: echo "display the course name"
