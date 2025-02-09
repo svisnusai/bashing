@@ -4,5 +4,5 @@
   - name: devops
     ansible.builtin.debug:
      msg: 
-     - "tis course is a devops to automate reapeated tasks"
+     - "this course is a devops to automate reapeated tasks"
 
