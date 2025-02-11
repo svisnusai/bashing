@@ -4,8 +4,7 @@
   tasks: 
   - name: inst
     ansibe.builtin.package:
-     name: nginx
-     status: present
+     msg: "it is a course"
   
   # - name: enable nginx
   #   ansible.builtin.service:
