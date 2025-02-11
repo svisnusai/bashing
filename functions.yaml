@@ -1,6 +1,6 @@
 - name: functions and their uses
   hosts: BAS
-  become: yes
+  become:yes #kpkpkpk
   tasks: 
   - name:
     ansibe.builtin.debug:
