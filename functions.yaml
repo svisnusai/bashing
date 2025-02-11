@@ -2,6 +2,9 @@
   hosts: BAS
   become: yes
   tasks: 
-  - name: ansible
-    ansibe.inbuilt.service:
-     enabled: yes
+  - name: nginx
+    ansibe.inbuilt.package:
+     status: present
+  - name: enable nginx
+    ansible.inbuilt.service:
+     enable: yes
