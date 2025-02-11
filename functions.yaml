@@ -3,8 +3,8 @@
   become: yes
   tasks: 
   - name: nginx
-    ansibe.inbuilt.package:
+    ansibe.builtin.package:
      status: present
   - name: enable nginx
-    ansible.inbuilt.service:
+    ansible.builtin.service:
      enable: yes
