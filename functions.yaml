@@ -4,4 +4,4 @@
   tasks: 
   - name: ansible
     ansibe.inbuilt.service:
-    enabled: yes
+     enabled: yes
