@@ -2,7 +2,7 @@
   hosts: BAS
   become: yes
   tasks: 
-  - name: inst
+  - name:
     ansibe.builtin.debug:
      msg : "it is a course"
   
