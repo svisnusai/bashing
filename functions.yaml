@@ -1,5 +1,6 @@
 - name: functions and their uses
   hosts: BAS
+  become: yes
   tasks: 
   - name: ansible
     ansibe.inbuilt.service:
