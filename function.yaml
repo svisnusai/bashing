@@ -3,4 +3,4 @@
   tasks:
   - name: other task
     ansible.builtin.debug:
-     msg = "other task function" 
+     msg : "this is a task"
