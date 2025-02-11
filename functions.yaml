@@ -3,7 +3,7 @@
   become: yes
   tasks: 
   - name: inst
-    ansibe.builtin.package:
+    ansibe.builtin.dnf:
      name: nginx
      status: present
   
