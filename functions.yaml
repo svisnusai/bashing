@@ -1,13 +1,14 @@
 - name: functions and their uses
   hosts: BAS
-  #become: yes #kpkpkpk
+  become: yes #kpkpkpk
   tasks: 
   - name :
-    ansibe.builtin.debug:
-     msg : "it is a course"
+    ansibe.builtin.package:
+     name: nginx
+     state : present
   
-  # - name: enable nginx
-  #   ansible.builtin.service:
-  #    name: nginx
-  #    status: started
-  #    enable: yes
+  - name: enable nginx
+    ansible.builtin.service:
+     name: nginx
+     state: started
+     enable: yes
