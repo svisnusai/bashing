@@ -4,9 +4,11 @@
   tasks: 
   - name: install nginx
     ansibe.builtin.package:
+     name: nginx
      status: present
   
   - name: enable nginx
     ansible.builtin.service:
+     name: nginx
      status: started
      enable: yes
