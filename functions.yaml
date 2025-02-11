@@ -2,7 +2,7 @@
   hosts: BAS
   become: yes
   tasks: 
-  - name: nginx
+  - name: install nginx
     ansibe.builtin.package:
      status: present
   - name: enable nginx
