@@ -3,8 +3,8 @@
   become: yes
   tasks: 
   - name: inst
-    ansibe.builtin.package:
-     msg: "it is a course"
+    ansibe.builtin.debug:
+     msg : "it is a course"
   
   # - name: enable nginx
   #   ansible.builtin.service:
