@@ -1,8 +1,8 @@
 - name: functions and their uses
   hosts: BAS
-  become:yes #kpkpkpk
+  #become: yes #kpkpkpk
   tasks: 
-  - name:
+  - name :
     ansibe.builtin.debug:
      msg : "it is a course"
   
