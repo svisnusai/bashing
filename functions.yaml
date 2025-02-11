@@ -1,14 +1,14 @@
-- name: functions and their uses
+- name: install nginx
   hosts: BAS
-  become: yes #kpkpkpk
-  tasks: 
-  - name : install nginx
-    ansibe.builtin.package:
+  become: yes
+  tasks:
+  - name: install nginx
+    ansible.builtin.package:
      name: nginx
      state: present
-  
-  - name: enable nginx
+  - name: 
     ansible.builtin.service:
      name: nginx
      state: started
-     enable: yes
+     enabled: yes
+
