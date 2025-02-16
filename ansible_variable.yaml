@@ -1,28 +1,28 @@
 - name: ansible variables
   hosts: sega
-  vars_files:
-     - code_variables.yaml
-#   vars:
-#     course: cloud engineering
-#     db: sql
-#     tool: ansible
-#   tasks:
-#   - name: print variables
-#     ansible.builtin.debug:
-#       msg: "show that {{course}}, base {{db}}, mention {{tool}}"
-#   - name: print variables
-#     vars:
-#       db: "this is a rdb structure"
-#     ansible.builtin.debug:
-#       msg: "show that {{course}}, base {{db}}, mention {{tool}}"
-#   - name: print variables
-#     vars:
-#       A: "0.23"
-#       B: "0.22"
-#       c: "0.16"
-#     ansible.builtin.debug:
-#       msg: "addition {{A}}, multi {{B}}, bodmas {{c}}"
+  # vars_files:
+  #    - code_variables.yaml
+  vars:
+  - course: cloud engineering
+  - db: sql
+  - tool: ansible
   tasks:
-  - name: print variables   
+  - name: print variables
     ansible.builtin.debug:
-      msg: "addition {{course}}, {{material}}, {{system}}"
+      msg: "show that {{course}}, base {{db}}, mention {{tool}}"
+  # - name: print variables
+  #   vars:
+  #     db: "this is a rdb structure"
+  #   ansible.builtin.debug:
+  #     msg: "show that {{course}}, base {{db}}, mention {{tool}}"
+  # - name: print variables
+  #   vars:
+  #     A: "0.23"
+  #     B: "0.22"
+  #     c: "0.16"
+  #   ansible.builtin.debug:
+  #     msg: "addition {{A}}, multi {{B}}, bodmas {{c}}"
+  # tasks:
+  # - name: print variables   
+  #   ansible.builtin.debug:
+  #     msg: "addition {{course}}, {{material}}, {{system}}"
