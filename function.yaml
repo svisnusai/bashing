@@ -1,6 +1,0 @@
-- name: other execution
-  hosts: BAS
-  tasks:
-  - name: other
-    ansible.builtin.debug:
-     msg : "this is a other task"
