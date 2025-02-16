@@ -5,8 +5,7 @@
   tasks:
   - name: type of variable using inventory
     ansible.builtin.debug:
-    - msg: "{{course}}, {{material}}, {{system}}"
-
+      msg: "{{course}}, {{material}}, {{system}}"
   #type: using prompt
   #vars_prompt:
   # - name: course using prompt
