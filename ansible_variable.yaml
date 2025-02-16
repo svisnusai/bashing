@@ -1,0 +1,10 @@
+- name: ansible variables
+  hosts: sega
+  vars:
+    course: cloud engineering
+    db: sql
+    tool: ansible
+  tasks:
+  - name: print variables
+    ansible.builtin.debug:
+      msg: "show that {{course}}, base {{db}}, mention {{tool}}"
