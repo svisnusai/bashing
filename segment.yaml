@@ -1,0 +1,6 @@
+- name: segment
+  hosts: sega
+  tasks:
+  - name: this a addition
+    ansible.builtin.debug:
+     msg: "addition{{10+10}}"
