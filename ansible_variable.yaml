@@ -1,12 +1,15 @@
 - name: ansible variables
   hosts: sega
-  vars_promt:
+  vars_prompt:
   - name: course
-    promt: enter the cource name
+    prompt: enter the cource name
+    private: false #not confidential
   - name: material
-    promt: enter the material
+    prompt: enter the material
+    private: false #not confidential
   - name: system
-    promt: enter the system
+    prompt: enter the system
+    private: false #not confidential
   tasks:
   - name: echo
     ansible.builtin.debug:
