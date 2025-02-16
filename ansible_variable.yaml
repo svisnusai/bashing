@@ -19,4 +19,4 @@
       B: "0.22"
       c: "0.16"
     ansible.builtin.debug:
-      msg: "addition{{A+B+C}}, multi{{A*B*C}}, bodmas{{B}}"
+      msg: "addition {{A}}, multi {{B}}, bodmas {{c}}"
