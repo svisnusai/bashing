@@ -10,6 +10,6 @@
       msg: "show that {{course}}, base {{db}}, mention {{tool}}"
   - name: print variables
     vars:
-      mention: "ansible is a accessable from any os"
+      db: "this is a rdb structure"
     ansible.builtin.debug:
       msg: "show that {{course}}, base {{db}}, mention {{tool}}"
