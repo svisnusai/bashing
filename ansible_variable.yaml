@@ -1,21 +1,33 @@
 - name: ansible variables
   hosts: sega
-  vars_prompt:
-  - name: course
-    prompt: enter the cource name
-    private: false #not confidential
-  - name: material
-    prompt: enter the material
-    private: false #not confidential
-  - name: system
-    prompt: enter the system
-    private: false #not confidential
+  #types: play level, task level, through file, through inventory, using prompt and using args;
+  # Type: inventory 
   tasks:
-  - name: echo
+  - name: type of variable using inventory
     ansible.builtin.debug:
-      msg: "{{course}}, {{material}}, {{system}}"
+    - msg: "{{course}}, {{material}}, {{system}}"
+
+  #type: using prompt
+  #vars_prompt:
+  # - name: course using prompt
+  #   prompt: enter the cource name
+  #   private: false #not confidential
+  # - name: material
+  #   prompt: enter the material
+  #   private: false #not confidential
+  # - name: system
+  #   prompt: enter the system
+  #   private: false #not confidential
+  # tasks:
+  # - name: echo
+  #   ansible.builtin.debug:
+  #     msg: "{{course}}, {{material}}, {{system}}"
+
+# type: using files
   # vars_files:
   #    - code_variables.yaml
+
+#type: play level
   # vars:
   # - course: cloud engineering
   # - db: sql
@@ -24,6 +36,8 @@
   # - name: print variables
   #   ansible.builtin.debug:
   #     msg: "show that {{course}}, base {{db}}, mention {{tool}}"
+
+  # type: task level
   # - name: print variables
   #   vars:
   #     db: "this is a rdb structure"
@@ -40,3 +54,4 @@
   # - name: print variables   
   #   ansible.builtin.debug:
   #     msg: "addition {{course}}, {{material}}, {{system}}"
+  
