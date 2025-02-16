@@ -1,5 +1,7 @@
 - name: ansible variables
   hosts: sega
+  vars_files:
+     - code_variable.yaml
 #   vars:
 #     course: cloud engineering
 #     db: sql
@@ -21,8 +23,6 @@
 #     ansible.builtin.debug:
 #       msg: "addition {{A}}, multi {{B}}, bodmas {{c}}"
   tasks:
-  - name: print variables
-    vars_files:
-     - code_variable.yaml    
+  - name: print variables   
     ansible.builtin.debug:
       msg: "addition {{course}}, {{material}}, {{system}}"
