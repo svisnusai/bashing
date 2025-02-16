@@ -1,15 +1,26 @@
 - name: ansible variables
   hosts: sega
+  vars_promt:
+  - name: course
+    promt: enter the cource name
+  - name: material
+    promt: enter the material
+  - name: system
+    promt: enter the system
+  tasks:
+  - name: echo
+    ansible.builtin.debug:
+      msg: "{{course}}, {{material}}, {{system}}"
   # vars_files:
   #    - code_variables.yaml
-  vars:
-  - course: cloud engineering
-  - db: sql
-  - tool: ansible
-  tasks:
-  - name: print variables
-    ansible.builtin.debug:
-      msg: "show that {{course}}, base {{db}}, mention {{tool}}"
+  # vars:
+  # - course: cloud engineering
+  # - db: sql
+  # - tool: ansible
+  # tasks:
+  # - name: print variables
+  #   ansible.builtin.debug:
+  #     msg: "show that {{course}}, base {{db}}, mention {{tool}}"
   # - name: print variables
   #   vars:
   #     db: "this is a rdb structure"
