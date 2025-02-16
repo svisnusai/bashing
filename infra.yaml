@@ -8,8 +8,8 @@
      state: present
      msg: "nginx installation"
 
-  - name: enable nginx
-    ansible.builtin.service:
-      name: nginx
-      state: started
-      enabled: yes
+  # - name: enable nginx
+  #   ansible.builtin.service:
+  #     name: nginx
+  #     state: started
+  #     enabled: yes
