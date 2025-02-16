@@ -22,7 +22,7 @@
 #       msg: "addition {{A}}, multi {{B}}, bodmas {{c}}"
   tasks:
   - name: print variables
-    vars:
+    vars_files:
      - code_variable.yaml    
     ansible.builtin.debug:
       msg: "addition {{course}}, {{material}}, {{system}}"
