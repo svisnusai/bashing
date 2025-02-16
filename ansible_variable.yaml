@@ -1,7 +1,7 @@
 - name: ansible variables
   hosts: sega
   #types: play level, task level, through file, through inventory, using prompt and using args;
-  # Type: inventory 
+  #type: inventory 
   tasks:
   - name: type of variable using inventory
     ansible.builtin.debug:
