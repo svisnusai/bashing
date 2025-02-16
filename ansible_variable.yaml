@@ -13,3 +13,10 @@
       db: "this is a rdb structure"
     ansible.builtin.debug:
       msg: "show that {{course}}, base {{db}}, mention {{tool}}"
+  - name: print variables
+    vars:
+      A: 0.23
+      B: 0.22
+      c: 0.16
+    ansible.builtin.debug:
+      msg: "addition{{A+B+C}}, multi{{A*B*C}}, bodmas{{(A*B)%}}"
