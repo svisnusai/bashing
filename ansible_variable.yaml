@@ -1,7 +1,7 @@
 - name: ansible variables
   hosts: sega
   vars_files:
-     - code_variable.yaml
+     - code_variables.yaml
 #   vars:
 #     course: cloud engineering
 #     db: sql
