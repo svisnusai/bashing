@@ -9,7 +9,7 @@
   tasks:
   - name: print variables
     ansible.builtin.debug:
-      msg: "show that {{course}}, base {{db}}, mention {{tool}}"
+    - msg: "show that {{course}}, base {{db}}, mention {{tool}}"
   # - name: print variables
   #   vars:
   #     db: "this is a rdb structure"
