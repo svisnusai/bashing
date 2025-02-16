@@ -8,3 +8,8 @@
   - name: print variables
     ansible.builtin.debug:
       msg: "show that {{course}}, base {{db}}, mention {{tool}}"
+  - name: print variables
+    vars:
+      mention: "ansible is a accessable from any os"
+    ansible.builtin.debug:
+      msg: "show that {{course}}, base {{db}}, mention {{tool}}"
