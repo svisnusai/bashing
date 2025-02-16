@@ -2,14 +2,14 @@
   hosts: sega
   become: yes
   tasks:
-  - name: install nginx
-    ansible.builtin.dnf:
-      name: nginx
-      state: present
-      msg: "nginx installation"
-
-  # - name: enable nginx
-  #   ansible.builtin.service:
+  # - name: install nginx
+  #   ansible.builtin.dnf:
   #     name: nginx
-  #     state: started
-  #     enabled: yes
+  #     state: present
+  #     msg: "nginx installation"
+
+  - name: enable nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
