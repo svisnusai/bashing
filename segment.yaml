@@ -3,7 +3,7 @@
   tasks:
   - name: this a addition
     ansible.builtin.debug:
-     msg: "addition{{10+10}}"
+     msg: "addition={{10+10}}"
   - name: this is multiplication
     ansible.builtin.debug:
-     msg: "multi{{10*2}}"
+     msg: "multiplication={{10*2}}"
