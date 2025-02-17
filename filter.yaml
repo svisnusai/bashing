@@ -7,6 +7,7 @@
     private: false
   tasks:
   - name: print if less than
+    when: number =< 10 #this is a integer
     ansible.builtin.debug:
       msg: "this a filter and show {{number}}"
-    when: number =< 10 #this is a integer
+    
