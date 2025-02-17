@@ -1,10 +1,10 @@
 - name: regarding the error handling
   hosts: sega
   become: yes
-  taskS:
+  tasks:
   - name: 
-    ansible.builtin.command: id user
+    ansible.builtin.command: id expense
     register: user
   - name:
     ansible.builtin.debug:
-      msg: "this a user anme {{user}}"
+      msg: "this a user name {{user}}"
