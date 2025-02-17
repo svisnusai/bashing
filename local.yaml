@@ -1,11 +1,7 @@
 - name: play level variables
   hosts: sega
-  
+  vars_files: code_variables.yaml
   tasks:
   - name: play level tasks
-    vars:
-    - course: "engine"
-    - material: "online class"
-    - systems: "cloud servers"
     ansible.builtin.debug:
      msg: featuring ${{course}}, ${{material}}, ${{systems}}
