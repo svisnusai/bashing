@@ -4,7 +4,7 @@
   tasks:
   - name: play level tasks
     vars:
-    - course: "cloud engine"
+    - course: "engine"
     - material: "online class"
     - systems: "cloud servers"
     ansible.builtin.debug:
