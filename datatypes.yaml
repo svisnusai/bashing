@@ -17,5 +17,6 @@
       cm: ansible
       cloud: aws
   tasks:
-  ansible.builtin.debug:
-    msg: "{{course}}, {{material}}, {{topics}}"
+  - name: tasklevel
+    ansible.builtin.debug:
+      msg: "{{course}}, {{material}}, {{topics}}"
