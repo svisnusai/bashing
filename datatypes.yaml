@@ -1,5 +1,6 @@
 - name: regarding data types
   hosts: local
+  connection: local
   vars: #string
     course: cloud
     material: online
@@ -15,6 +16,6 @@
       ci: jenkins
       cm: ansible
       cloud: aws
-    tasks:
-    ansible.builtin.debug:
-      msg: "{{course}}, {{material}}, {{topics}}"
+  tasks:
+  ansible.builtin.debug:
+    msg: "{{course}}, {{material}}, {{topics}}"
