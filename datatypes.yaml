@@ -19,4 +19,5 @@
   tasks:
   - name: tasklevel
     ansible.builtin.debug:
-      msg: "{{course}}, {{material}}, {{topics}}"
+      # msg: "{{course}}, {{material}}, {{topics}}"
+      msg: "{{tools}}, {{material}}, {{topics}}"
