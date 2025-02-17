@@ -1,0 +1,17 @@
+- name: regarding data types
+  hosts: sega
+  vars: #string
+    course: cloud
+    material: online
+    systems: servers
+    topics: #list
+     - linux
+     - shell
+     - ansible
+     - aws
+     - k8
+    live: true #boolean
+    tools: # map/dictionary
+      ci: jenkins
+      cm: ansible
+      cloud: aws

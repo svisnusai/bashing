@@ -6,53 +6,53 @@
   - name: type of variable using inventory
     ansible.builtin.debug:
       msg: "{{course}}, {{material}}, {{system}}"
-  #type: using prompt
-  #vars_prompt:
-  # - name: course using prompt
-  #   prompt: enter the cource name
-  #   private: false #not confidential
-  # - name: material
-  #   prompt: enter the material
-  #   private: false #not confidential
-  # - name: system
-  #   prompt: enter the system
-  #   private: false #not confidential
-  # tasks:
-  # - name: echo
-  #   ansible.builtin.debug:
-  #     msg: "{{course}}, {{material}}, {{system}}"
+  type: using prompt
+  vars_prompt:
+  - name: course using prompt
+    prompt: enter the cource name
+    private: false #not confidential
+  - name: material
+    prompt: enter the material
+    private: false #not confidential
+  - name: system
+    prompt: enter the system
+    private: false #not confidential
+  tasks:
+  - name: echo
+    ansible.builtin.debug:
+      msg: "{{course}}, {{material}}, {{system}}"
 
-# type: using files
-  # vars_files:
-  #    - code_variables.yaml
+type: using files
+  vars_files:
+     - code_variables.yaml
 
-#type: play level
-  # vars:
-  # - course: cloud engineering
-  # - db: sql
-  # - tool: ansible
-  # tasks:
-  # - name: print variables
-  #   ansible.builtin.debug:
-  #     msg: "show that {{course}}, base {{db}}, mention {{tool}}"
+type: play level
+  vars:
+  - course: cloud engineering
+  - db: sql
+  - tool: ansible
+  tasks:
+  - name: print variables
+    ansible.builtin.debug:
+      msg: "show that {{course}}, base {{db}}, mention {{tool}}"
 
-  # type: task level
-  # - name: print variables
-  #   vars:
-  #     db: "this is a rdb structure"
-  #   ansible.builtin.debug:
-  #     msg: "show that {{course}}, base {{db}}, mention {{tool}}"
-  # - name: print variables
-  #   vars:
-  #     A: "0.23"
-  #     B: "0.22"
-  #     c: "0.16"
-  #   ansible.builtin.debug:
-  #     msg: "addition {{A}}, multi {{B}}, bodmas {{c}}"
-  # tasks:
-  # - name: print variables   
-  #   ansible.builtin.debug:
-  #     msg: "addition {{course}}, {{material}}, {{system}}"
+  type: task level
+  - name: print variables
+    vars:
+      db: "this is a rdb structure"
+    ansible.builtin.debug:
+      msg: "show that {{course}}, base {{db}}, mention {{tool}}"
+  - name: print variables
+    vars:
+      A: "0.23"
+      B: "0.22"
+      c: "0.16"
+    ansible.builtin.debug:
+      msg: "addition {{A}}, multi {{B}}, bodmas {{c}}"
+  tasks:
+  - name: print variables   
+    ansible.builtin.debug:
+      msg: "addition {{course}}, {{material}}, {{system}}"
 
   #note: priority
   #commandline/args > task level > files > prompt > play level > inventory
