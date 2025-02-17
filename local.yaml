@@ -1,2 +1,10 @@
 - name: play level variables
-  hosts:
+  hosts: sega
+  vars:
+   - course: cloud
+   - material: online class
+   - systems: cloud servers
+  tasks:
+  - name: play level tasks
+    ansible.builtin.debug:
+     msg: featuring {{course}}, {{material}}, {{systems}}
