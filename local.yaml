@@ -1,6 +1,7 @@
 - name: play level variables
   hosts: sega
-  vars_files: code_variables.yaml
+  vars_files: 
+  - code_variables.yaml
   tasks:
   - name: play level tasks
     ansible.builtin.debug:
