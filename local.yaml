@@ -8,4 +8,4 @@
     - material: "online class"
     - systems: "cloud servers"
     ansible.builtin.debug:
-     msg: featuring {{course}}, {{material}}, {{systems}}
+     msg: featuring ${{course}}, ${{material}}, ${{systems}}
