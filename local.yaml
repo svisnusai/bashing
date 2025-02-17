@@ -1,15 +1,5 @@
 - name: files
   hosts: sega
-  vars_prompt:
-  - name: course
-    prompt: enter the corse
-    private: false
-  - name: material
-    prompt: enter the material
-    private: false
-  - name: systems
-    prompt: enter the systems
-    private: false
   tasks:
   - name: play level tasks
     ansible.builtin.debug:
