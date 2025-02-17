@@ -53,4 +53,8 @@
   # - name: print variables   
   #   ansible.builtin.debug:
   #     msg: "addition {{course}}, {{material}}, {{system}}"
-  
+
+  #note: priority
+  #commandline/args > task level > files > prompt > play level > inventory
+
+   
