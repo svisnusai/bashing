@@ -2,11 +2,11 @@
   hosts: local
   connection: local
   vars_prompt:
-  - name: int_number
+  - name: number
     prompt: enter the number
     private: false
   tasks:
   - name: print if less than
     ansible.builtin.debug:
-      msg: "this a filter and show {{int_number}}"
-    when: int_number < 10 #this is a integer
+      msg: "this a filter and show {{number}}"
+    when: number | int < 10 #this is a integer
