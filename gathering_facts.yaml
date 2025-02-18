@@ -1,0 +1,7 @@
+- name: gathering facts checks
+  hosts: sega
+  become: yes
+  tasks:
+  - name: these are from gathers
+    ansible.builtin.debug:
+      msg: "these are from {{ansible_facts}}"
