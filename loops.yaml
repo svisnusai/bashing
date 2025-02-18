@@ -1,0 +1,11 @@
+- name: loops
+  hosts: sega
+  become: yes
+  tasks:
+  - name:
+    ansible.builtin.debug:
+      msg: thia a user {{item}}
+    loop:
+    - ramesh
+    - suresh
+    - rajesh
