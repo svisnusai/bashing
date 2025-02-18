@@ -1,7 +1,12 @@
-- name: gathering facts checks
+- name: gathering fact checks
   hosts: sega
   become: yes
   tasks:
   - name: these are from gathers
     ansible.builtin.debug:
       msg: "these are from {{ansible_facts}}"
+  - name: install nginx
+    ansible.builtin.dnf:
+      name: nginx
+      state: present
+    when: ansible_os_family == "RedHat"
