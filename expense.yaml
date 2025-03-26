@@ -26,7 +26,7 @@
     register: reso
   - name: display name
     ansible.builtin.debug:
-      msg: "display the name {{reso}}"
+      msg: "{{ reso }}"
   # - name: create rout53 records
   #   amazon.aws.route53:
   #     state: present
