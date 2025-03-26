@@ -1,0 +1,22 @@
+- name: expense project 
+  hosts: local
+  connection: local
+  vars:
+    nexus:
+    - mysql
+    - backend
+    - frontend
+  tasks:
+  - name: create ec2 instances
+    amazon.aws.ec2_instance:
+      name: "{{ item }} "
+      vpc_subnet_id: "subnet-00a686d0e79dedb31"
+      instance_type: "t3.micro"
+      security_group: "sg-0201d0d466a3135e4"
+      image_id: ami-09c813fb71547fc4f
+      wait: true
+    loop: "{{ nexus }}"
+    register: reso
+  - name: display name
+    ansible.builtin.debug:
+      msg: "display the name {{nexus}}"
