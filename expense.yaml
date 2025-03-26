@@ -49,4 +49,4 @@
       wait: true
       overwrite: true
     loop: "{{reso.results}}"
-    when: item.item == "fronted"
+    when: item.item == "frontend"
