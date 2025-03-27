@@ -25,14 +25,16 @@
       name: mysqld
       state: started
       enabled: yes
-  - name: 
-    community.mysql.mysql_info:
-      login_user: root
-      login_password: "{{ lp }}"
-      login_host: "{{ lh }}"
-      ignore_errors: true
-    register: sql
-  - name: display sql
-    ansible.builtin.debug:
-      msg: "{{ sql }}"
+  # - name: 
+  #   community.mysql.mysql_info:
+  #     login_user: root
+  #     login_password: "{{ lp }}"
+  #     login_host: "{{ lh }}"
+  #   ignore_errors: true
+  #   register: sql
+  # - name: display sql
+  #   ansible.builtin.debug:
+  #     msg: "{{ sql }}"
+  - name: setup sql user name
+    ansible.builtin.command: "mysql_secure_installation --set-root-pass {{lp}}"
   
