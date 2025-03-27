@@ -1,6 +1,10 @@
 - name: create mysql server
   hosts: mysql
   become: yes
+  vars:
+    lp: "ExpenseApp@1"
+    lh: "mysql.rupakalpan.shop"
+
   tasks:
   - name: create mysql server
     ansible.builtin.package:
@@ -12,3 +16,14 @@
       state: started
       enabled: yes
   
+  - name: 
+    ansible.builtin.service:
+      name: mysqld
+      state: started
+      enabled: yes
+  - nmae: 
+    community.mysql.mysql_info:
+      login_user: root
+      login_password: "{{ lp }}"
+      login_host: "{{ lh }}"
+      state: present
