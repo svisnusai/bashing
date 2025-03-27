@@ -26,4 +26,3 @@
       login_user: root
       login_password: "{{ lp }}"
       login_host: "{{ lh }}"
-      state: present
