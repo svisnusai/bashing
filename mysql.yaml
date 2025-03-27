@@ -6,6 +6,10 @@
     lh: mysql.rupakalpan.shop
 
   tasks:
+  - name: install sql
+    ansible.builtin.pip:
+      name: pymysql
+      executable: pip3.9
   - name: create mysql server
     ansible.builtin.package:
       name: mysql-server
