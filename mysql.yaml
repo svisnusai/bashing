@@ -22,7 +22,7 @@
       state: started
       enabled: yes
   - nmae: 
-    community.mysql.mysql_info:
+    community.mysql.mysql_user:
       login_user: root
       login_password: "{{ lp }}"
       login_host: "{{ lh }}"
