@@ -26,4 +26,9 @@
       login_user: root
       login_password: "{{ lp }}"
       login_host: "{{ lh }}"
+      ignore_errors: true
     register: sql
+  - name: display sql
+    ansible.builtin.debug:
+      msg: "{{ sql }}"
+  
