@@ -2,8 +2,8 @@
   hosts: mysql
   become: yes
   vars:
-    lp: "ExpenseApp@1"
-    lh: "mysql.rupakalpan.shop"
+    lp: ExpenseApp@1
+    lh: mysql.rupakalpan.shop
 
   tasks:
   - name: create mysql server
